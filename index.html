@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alerta CO | Ficha técnica</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
     <style>
         * {
@@ -32,7 +34,7 @@
             gap: 14px;
             padding: 15px 0 28px;
             border-bottom: 1px solid rgba(56,189,248,.18);
-            margin-bottom: 45px;
+            margin-bottom: 25px;
         }
 
         .logo {
@@ -57,6 +59,32 @@
             color: #64748b;
             font-size: 12px;
             margin-top: 3px;
+        }
+
+        /* BOTÓN VOLVER */
+        .volver-contenedor {
+            margin-bottom: 35px;
+        }
+
+        .btn-volver {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 12px 19px;
+            border: 1px solid rgba(56,189,248,.3);
+            border-radius: 12px;
+            color: #7dd3fc;
+            background: rgba(56,189,248,.05);
+            text-decoration: none;
+            font-size: 14px;
+            transition: .2s ease;
+        }
+
+        .btn-volver:hover {
+            background: rgba(56,189,248,.13);
+            border-color: #38bdf8;
+            color: #fff;
+            transform: translateY(-2px);
         }
 
         .intro {
@@ -209,14 +237,18 @@
             .card {
                 padding: 19px;
             }
+
+            .flow {
+                flex-direction: column;
+            }
+
+            .flow b {
+                transform: rotate(90deg);
+            }
         }
     </style>
 </head>
-<a href="http://localhost/codeigniter-1/public/"
-   class="btn-volver">
-    <i class="fa-solid fa-arrow-left"></i>
-    Volver al inicio
-</a>
+
 <body>
 <div class="container">
 
@@ -227,6 +259,13 @@
             <div class="subtitle">Sistema de monitoreo de monóxido de carbono</div>
         </div>
     </header>
+
+    <div class="volver-contenedor">
+        <a href="http://localhost/codeigniter-1/public/" class="btn-volver">
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver al inicio
+        </a>
+    </div>
 
     <section class="intro">
         <div class="eyebrow">Documentación del dispositivo</div>
