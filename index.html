@@ -1,0 +1,317 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerta CO | Ficha técnica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #050814;
+            color: #e2e8f0;
+            font-family: 'DM Sans', sans-serif;
+            padding: 30px 20px 50px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 15px 0 28px;
+            border-bottom: 1px solid rgba(56,189,248,.18);
+            margin-bottom: 45px;
+        }
+
+        .logo {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(56,189,248,.3);
+            border-radius: 13px;
+            background: rgba(56,189,248,.1);
+            color: #38bdf8;
+            font-size: 24px;
+        }
+
+        .brand {
+            font-family: 'Syne', sans-serif;
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+        .eyebrow {
+            color: #38bdf8;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 11px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(32px, 6vw, 48px);
+            margin-bottom: 16px;
+        }
+
+        h1 span {
+            color: #38bdf8;
+        }
+
+        .intro p {
+            max-width: 650px;
+            margin: auto;
+            color: #94a3b8;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: #0a1022;
+            border: 1px solid rgba(56,189,248,.18);
+            border-radius: 17px;
+            padding: 24px;
+        }
+
+        .card h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 18px;
+            color: #7dd3fc;
+            margin-bottom: 14px;
+        }
+
+        .card p, .card li {
+            color: #a8b5c8;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .wide {
+            grid-column: 1 / -1;
+        }
+
+        .components {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .component {
+            padding: 14px;
+            border-radius: 12px;
+            background: rgba(56,189,248,.05);
+            border: 1px solid rgba(56,189,248,.1);
+        }
+
+        .component strong {
+            display: block;
+            color: #e2e8f0;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .component span {
+            color: #94a3b8;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .flow span {
+            border: 1px solid rgba(56,189,248,.25);
+            background: rgba(56,189,248,.07);
+            border-radius: 10px;
+            padding: 12px 14px;
+            color: #7dd3fc;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .flow b {
+            color: #38bdf8;
+        }
+
+        .notice {
+            margin-top: 25px;
+            padding: 18px;
+            border-radius: 12px;
+            background: rgba(56,189,248,.05);
+            border: 1px solid rgba(56,189,248,.17);
+            color: #94a3b8;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .notice strong {
+            color: #7dd3fc;
+        }
+
+        footer {
+            text-align: center;
+            border-top: 1px solid rgba(56,189,248,.12);
+            margin-top: 40px;
+            padding-top: 22px;
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        @media (max-width: 650px) {
+            .grid, .components {
+                grid-template-columns: 1fr;
+            }
+
+            .wide {
+                grid-column: auto;
+            }
+
+            .card {
+                padding: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <header>
+        <div class="logo">◉</div>
+        <div>
+            <div class="brand">ALERTA CO</div>
+            <div class="subtitle">Sistema de monitoreo de monóxido de carbono</div>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="eyebrow">Documentación del dispositivo</div>
+        <h1>Ficha <span>técnica</span></h1>
+        <p>
+            Alerta CO es un prototipo de monitoreo de monóxido de carbono.
+            Utiliza un sensor MQ-7, una placa ESP32 y una conexión Wi-Fi
+            para transmitir las lecturas a una plataforma web.
+        </p>
+    </section>
+
+    <main class="grid">
+
+        <section class="card">
+            <h2>01. Sensor MQ-7</h2>
+            <p>
+                Detecta la presencia de monóxido de carbono en el ambiente.
+                Sus lecturas son recibidas por la placa ESP32 para ser
+                procesadas por el programa.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>02. Placa ESP32</h2>
+            <p>
+                Es la unidad de procesamiento del dispositivo. Lee la señal
+                del sensor, ejecuta la programación y permite la comunicación
+                con la plataforma mediante Wi-Fi.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>03. Pantalla OLED</h2>
+            <p>
+                Permite visualizar mensajes y estados del dispositivo
+                directamente en el equipo.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>04. Indicadores de alerta</h2>
+            <p>
+                El LED y el buzzer proporcionan señales visuales y sonoras
+                cuando se cumplen las condiciones establecidas en el programa.
+            </p>
+        </section>
+
+        <section class="card wide">
+            <h2>Componentes principales</h2>
+            <div class="components">
+                <div class="component">
+                    <strong>MQ-7</strong>
+                    <span>Sensor utilizado para detectar monóxido de carbono.</span>
+                </div>
+                <div class="component">
+                    <strong>ESP32 DevKit</strong>
+                    <span>Procesamiento de lecturas y conexión Wi-Fi.</span>
+                </div>
+                <div class="component">
+                    <strong>Pantalla OLED SSD1306</strong>
+                    <span>Visualización local de mensajes y estados.</span>
+                </div>
+                <div class="component">
+                    <strong>LED y buzzer</strong>
+                    <span>Indicadores visuales y sonoros del sistema.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="card wide">
+            <h2>¿Cómo funciona?</h2>
+            <p>
+                El sistema sigue una secuencia de lectura, procesamiento
+                y transmisión de datos.
+            </p>
+
+            <div class="flow">
+                <span>Sensor MQ-7</span>
+                <b>→</b>
+                <span>ESP32</span>
+                <b>→</b>
+                <span>Wi-Fi</span>
+                <b>→</b>
+                <span>Plataforma web</span>
+            </div>
+        </section>
+
+        <section class="card wide">
+            <h2>Conexiones del prototipo</h2>
+            <ul>
+                <li>Sensor
